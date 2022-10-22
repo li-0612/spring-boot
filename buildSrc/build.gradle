@@ -1,10 +1,14 @@
 plugins {
 	id "java-gradle-plugin"
-	id "io.spring.javaformat" version "${javaFormatVersion}"
+	//TODO 文件格式化问题可以注释此行
+	//id "io.spring.javaformat" version "${javaFormatVersion}"
 	id "checkstyle"
 }
-
 repositories {
+	//加上阿里云镜像
+	maven { url 'https://maven.aliyun.com/repository/central' }
+//	maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter' }
+//	maven { url "https://repo.spring.io/plugins-release" }
 	mavenCentral()
 	gradlePluginPortal()
 	maven { url "https://repo.spring.io/release" }
